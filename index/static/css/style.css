@@ -1,0 +1,550 @@
+/* @charset "utf-8"; */
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/background.png");
+    font-family: 'Source Han Sans SC', 'Noto Sans CJK SC', 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB', STHeiti, 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+}
+
+a:hover {
+    color: #333;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+}
+
+.main a {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    margin: 10px;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+.main a:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.main svg {
+    width: 1em;
+}
+
+.head {
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+
+.head_fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.head_avatar {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.head_avatar img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.head_title {
+    margin-left: 1em;
+}
+
+.head_title h1 {
+    font-size: 1.5em;
+    margin:0;
+    padding: 0;
+}
+
+.head p {
+    margin-top: 10px;
+}
+
+.toolkit {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+}
+
+.toolkit h2 {
+    font-size: 1.3em;
+    margin-top: 2em;
+}
+
+.toolkit_card{
+    position: relative;
+}
+
+.toolkit_more {
+    position: absolute;
+    top: -2.4em;
+    right: 0;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.toolkit_flex {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 10px;
+    margin: 10px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s, background-color 0.3s;
+    -moz-transition: color 0.3s, background-color 0.3s;
+    -webkit-transition: color 0.3s, background-color 0.3s;
+    -o-transition: color 0.3s, background-color 0.3s;
+}
+
+.item:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.soft_icon {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.soft_icon img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.soft_name {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.card_hide {
+    display: none;
+}
+
+.body {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.body table{
+    margin-top: 2em;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 0.9em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.body a {
+    color: #198d44;
+}
+
+.body a:hover {
+    color: #2db15d;
+}
+
+.body th,
+.body td {
+    height: 1.7em;
+    line-height: 1.7em;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.body th {
+    background-color: #ddd;
+}
+
+.body td {
+    background-color: #eee;
+    border-bottom: solid 1px #ddd;
+}
+
+.star {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.star img {
+    width: 20px;
+}
+
+.anime {
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    -moz-transition: background-color 0.3s, box-shadow 0.3s;
+    -webkit-transition: background-color 0.3s, box-shadow 0.3s;
+    -o-transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.anime:hover {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.anime_name {
+    width: 250px;
+    font-size: 0.8em;
+    font-weight: bold;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.anime_img img {
+    width: 100%;
+    position: relative;
+}
+
+.anime_days {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+    color: #333;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.anime_container {
+    position: relative;
+    width: 100%;
+    font-size: 0.8em;
+    text-align: center;
+    color: #fff;
+    background-color: #198d4454;
+}
+
+.anime_rate {
+    position: absolute;
+    height: 100%;
+    background-color: #198d44bb;
+    z-index: -1;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #888;
+}
+.tag {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #555;
+}
+.center {
+    text-align: center !important;
+}
+
+.list {
+    padding: 0 20px 0 20px;
+    backdrop-filter: blur(2px);
+    max-width:500px;
+}
+
+.list li {
+    height: auto;
+    margin-top: 5px;
+}
+
+.list a {
+    color: #198d44;
+}
+
+.list a:hover {
+    color: #2db15d;
+}
+
+.flex_row_wrap {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 801px) {
+    .index_l {
+        z-index: 999;
+        width: 70%;
+        height: 100%;
+        backdrop-filter: blur(3px);
+        background-color: rgba(255,255,255,0.5);
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+        background-image: url("../image/index.jpg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: width 1s ease-in-out;
+    }
+    .index_r {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .index_l {
+        display: none;
+    }
+    .index_r {
+        width: 100%;
+    }
+}
+
+.index_r {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.index_avatar {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+.index_avatar img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.index_r h1 {
+    margin: 0 auto;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.slogan {
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #555555;
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+@media screen and (min-width: 801px) {
+    .navigation {
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 800px) {
+    .navigation {
+        justify-content: center;
+    }
+}
+
+.navigation div{
+    padding: 0 1em 0 1em;
+    cursor: pointer;
+    transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+}
+
+.navigation div:hover{
+    color: #198d44;
+}
+
+#info {
+    /* transform: scale(0.2); */
+    transition: transform 1s ease-in-out;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.power {
+    font-size: 0.7em;
+}
+
+.copy {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy img {
+    width: 24px;
+}
+.copy a {
+    margin-left: 0.5em;
+}
+
+.note {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+.note a {
+    color: #198d44;
+}
+
+.note a:hover {
+    color: #2db15d;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-9729d7da-6fd9-4260-80ad-fcb8af64dc44" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <defs>
+    <style>
+      .uuid-fb9674e0-8df7-414d-a7dd-8403918cabce {
+        fill: #ff9a00;
+      }
+
+      .uuid-2e313f31-d302-4e1a-a97e-9fa4bc20037c {
+        fill: #300;
+      }
+    </style>
+  </defs>
+  <rect class="uuid-2e313f31-d302-4e1a-a97e-9fa4bc20037c" width="89" height="89" rx="14.53" ry="14.53"/>
+  <g>
+    <path class="uuid-fb9674e0-8df7-414d-a7dd-8403918cabce" d="m30.57,23.06h11.77l12.7,40.97h-10.34l-2.36-9.4h-12.1l-2.36,9.4h-10.01l12.7-40.97Zm1.54,23.98h8.36l-.88-3.46c-1.1-4.07-2.14-8.96-3.24-13.14h-.22c-.99,4.29-2.09,9.07-3.13,13.14l-.88,3.46Z"/>
+    <path class="uuid-fb9674e0-8df7-414d-a7dd-8403918cabce" d="m58.02,25.33c0-3.02,2.14-5,5.44-5s5.44,1.98,5.44,5-2.2,5.06-5.44,5.06-5.44-1.98-5.44-5.06Zm.55,7.4h9.79v31.29h-9.79v-31.29Z"/>
+  </g>
+</svg>

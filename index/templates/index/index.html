@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <title>勤劳的牧场主 | 阿源的主页</title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0F3KXZRE7Z"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0F3KXZRE7Z');
+        </script>
+    </head>
+
+    <body>
+        <div id="app" style="flex-flow: row nowrap;">
+            <div class="index_l" id="cover"></div>
+            <div class="index_r" id="main">
+                <div class="navigation">
+                    <!-- <div @click="to('/favorites')">收藏</div> -->
+                    <!-- <div @click="to('/toolkit')">工具</div> -->
+                    <a href="https://live.bilibili.com/3472667" target="_blank" rel="noopener noreferrer"><div>直播间</div></a>
+                </div>
+                <div id="info">
+                    <div class="index_avatar"><img src="{% static 'image/13422426.png' %}"></div>
+                    <h1>勤劳的牧场主</h1>
+                    <p class="slogan">名字是「<span style="color: #198d44; font-weight: 500;">起源</span>」，也可以叫我阿源 ！</p>
+                </div>
+
+                <div class="info">
+                    <div class="copy">
+                        <img src="{% static 'icon/GitHub_Invertocat_Logo.svg' %}"><a href="https://github.com/MisakaAI" target="_blank">MisakaAI</a>&nbsp;&copy;&nbsp; <span v-text="year"></span>
+                    </div>
+                    <div class="power">Powered by Misaka Network</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+
+        const { createApp } = Vue
+
+        createApp({
+            data() {return {
+                year: new Date().getFullYear(),
+            }},
+            // created() {},
+            methods: {
+                to(e) {
+                    console.log(e)
+                    // 获取id为index的div元素
+                    const cover = document.getElementById('cover')
+                    const main = document.getElementById('main')
+                    const info = document.getElementById('info')
+
+                    // 设置 div 宽度
+                    // 设置 transform 属性为 scale(0.5)
+                    cover.style.width = '0'
+                    main.style.width = '100%'
+                    info.style.transform = 'scale(0.1)'
+
+                    // 在过渡效果完成后跳转到目标页面
+                    setTimeout(() => {
+                        // 跳转到目标页面（这里可以替换为实际的目标URL）
+                        window.location.href = e
+                        cover.style.width = ''
+                        main.style.width = ''
+                        info.style.transform = ''
+                    }, 1000) // 这里的500是过渡时间，单位是毫秒
+                }
+            },
+            mounted() {
+                const cover = document.getElementById('cover')
+                const main = document.getElementById('main')
+                const info = document.getElementById('info')
+
+                cover.style.width = '0'
+                main.style.width = '100%'
+                info.style.transform = 'scale(0.1)'
+
+                setTimeout(() => {
+                    cover.style.width = ''
+                    main.style.width = ''
+                    info.style.transform = ''
+                }, 100)
+            }
+        }).mount("#app")
+    </script>
+</html>
